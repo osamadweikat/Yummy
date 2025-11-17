@@ -1,0 +1,41 @@
+.mini-navbar-container {
+  position: absolute;
+  inset: 100px 0% auto;
+  z-index: 500;
+  overflow: hidden;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgb(19, 19, 19);
+}
+
+.mini-navbar-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1 1 0%;
+}
+
+.mini-navbar-links li {
+  display: flex;
+  height: 50px;
+  padding: 0px 25px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  background-color: transparent;
+  transition: opacity 0.2s ease;
+  color: whitesmoke;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mini-navbar-links li:hover {
+  opacity: 0.5;
+}

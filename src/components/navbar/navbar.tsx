@@ -5,7 +5,7 @@ import MenuIcon from "../../images/menu-icon.svg";
 const Navbar = () => {
   return (
     <nav className="navbar-container">
-      <div className="barnd-conatiner">
+      <div className="barnd-container">
         <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
         <h3 className="brand-text">Yummy</h3>
       </div>
