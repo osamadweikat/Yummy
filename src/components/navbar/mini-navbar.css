@@ -9,6 +9,11 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   background-color: rgb(19, 19, 19);
+  transform: translateY(-50px);
+  transition: transform 0.6s ease;
+}
+.mini-navbar-container.open {
+  transform: translateY(0);
 }
 
 .mini-navbar-links {

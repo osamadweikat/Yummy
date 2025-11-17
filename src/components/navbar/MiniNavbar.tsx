@@ -1,8 +1,12 @@
 import "./mini-navbar.css";
 
-const MiniNavbar = () => {
+interface NavbarProps {
+  isOpen: boolean;
+}
+
+const MiniNavbar = ({ isOpen }: NavbarProps) => {
   return (
-    <nav className="mini-navbar-container">
+    <nav className={`mini-navbar-container ${isOpen ? "open" : ""}`}>
       <ul className="mini-navbar-links">
         <li>all</li>
         <li>hous dishes</li>
