@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="navbar-button-wrapper">
         <button className="navbar-button">
           <img src={MenuIcon} alt="menu-icon" />
-          yummy menu
+          <span>yummy menu</span>
         </button>
       </div>
     </nav>
