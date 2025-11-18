@@ -6,12 +6,13 @@ import FacebookLogo from "../../images/facebook-logo.svg";
 import TwitterLogo from "../../images/twitter-logo.svg";
 import InstagramLogo from "../../images/instagram-logo.svg";
 import HeaderBg2 from "../../images/header-bg-2.svg";
-import HeaderMainPhoto from "../../images/header-main-photo.jpeg";
 import { miniNavbarLinks } from "../../types/nav.types";
+import Navbar from "../navbar/Navbar";
 
 const Header = () => {
   return (
     <header className="header-section">
+      <Navbar />
       <div className="header-container">
         <div className="header-contact-container">
           <button>
@@ -36,16 +37,16 @@ const Header = () => {
           </button>
         </div>
         <div className="header-text-container">
-          <div className="header-vertical-divider">
-            <div className="header-photo-container">
-              <img src={HeaderBg2} alt="header-bg" />
-              <h1 className="header-title1">yummy</h1>
-              <h1 className="header-title2">tummy</h1>
-              <div className="header-icon-container">
-                <img src={HeaderMainPhoto} alt="header-main-photo" />
-              </div>
+          <div className="header-vertical-divider" />
+          <div className="header-photo-container">
+            <h1 className="header-title1">yummy</h1>
+            <h1 className="header-title2">tummy</h1>
+            <div className="header-icon-container" />
+            <div className="header-secondary-image">
+              <img src={HeaderBg2} alt="" />
             </div>
           </div>
+          <div className="header-vertical-divider" />
         </div>
         <h6 className="opening-hours-text">
           <span>opening hours: </span>mon-sun, 8am - 10pm{" "}
