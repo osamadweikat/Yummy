@@ -1,0 +1,228 @@
+.about-section {
+  display: flex;
+  padding: 100px 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d833c63be860b4ccf1ff1a3_bottom-corner.png"),
+    url("https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d833c70cf90c938844a318a_top-corner.png"),
+    url("https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d835ae4be860b13e720ae87_top-corner-red.jpg"),
+    url("https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d835a8d28a6012bdb72350c_bottom-corner-red.jpg");
+  background-position: 0% 100%, 100% 0%, 100% 0%, 0% 100%;
+  background-size: 35%, 35%, 25%, 25%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
+.about-container {
+  position: relative;
+  display: grid;
+  width: 100%;
+  max-width: 1366px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  justify-content: flex-end;
+  grid-auto-columns: 1fr;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.reservation-form-container {
+  position: relative;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12.5px;
+  background-color: var(--goldenrod-color);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 25px -12.5px;
+}
+
+.form-title {
+  display: flex;
+  height: 10px;
+  padding-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(247, 247, 247);
+  line-height: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.reservation-form-block {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.conntact-form {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.conntact-form input:nth-child(n + 4) {
+  grid-column: 1 / -1;
+}
+
+.conntact-form input {
+  height: 50px;
+  margin-bottom: 0px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.conntact-form input:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.conntact-form input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.reservation-phone::-webkit-outer-spin-button,
+.reservation-phone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.conntact-form button {
+  display: flex;
+  height: 50px;
+  grid-column: 1 / -1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(19, 19, 19);
+  font-family: Blinker;
+  color: whitesmoke;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.conntact-form button:hover {
+  background-color: rgb(43, 43, 43);
+}
+
+.about-info-container {
+  position: relative;
+  display: flex;
+  padding: 45px 50px 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12.5px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 25px -12.5px;
+}
+
+.about-info-text {
+  display: flex;
+  padding-bottom: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-title {
+  font-family: "Teko", sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #131313;
+}
+
+.about-us-title span {
+  font-family: "Teko", sans-serif;
+  color: #edb408;
+}
+
+.title-divider {
+  width: 50px;
+  height: 3px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  background-color: var(--goldenrod-color);
+}
+
+.about-info-text p {
+  text-align: center;
+  font-size: 15px;
+}
+
+.about-info-text p b span {
+  text-transform: uppercase;
+  color: #edb408;
+}
+
+.about-newsletter-block {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0px;
+  justify-content: center;
+}
+
+.about-newsletter-form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-newsletter-form input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0px;
+  padding-right: 75px;
+  padding-left: 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(19, 19, 19, 0.1);
+}
+
+.about-newsletter-form input:focus {
+  background-color: rgba(19, 19, 19, 0.2);
+  outline: none;
+}
+
+.about-newsletter-form input::placeholder {
+  color: rgba(19, 19, 19, 0.5);
+}
+
+.newsletter-form-button {
+  position: absolute;
+  inset: 0% 0% 0% auto;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto;
+  border-radius: 25px;
+  background-color: var(--goldenrod-color);
+  background-image: url("https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d7663aece0c576922bb84dc_send.svg");
+  background-position: 50% 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border: none;
+  transition: background-color 0.2s ease;
+  font-size: 0px;
+  line-height: 0px;
+  cursor: pointer;
+}
+
+.newsletter-form-button:hover {
+  background-color: var(--gold-color);
+}

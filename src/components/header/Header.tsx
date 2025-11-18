@@ -60,8 +60,8 @@ const Header = () => {
         <div className="header-menu-list-wrapper">
           <div className="header-menu-list">
             {miniNavbarLinks.slice(2).map((link) => (
-              <div className="header-menu-item">
-                <button key={link.id}>{link.label}</button>
+              <div key={link.id} className="header-menu-item">
+                <button>{link.label}</button>
                 <div className="color-bullet" />
               </div>
             ))}
