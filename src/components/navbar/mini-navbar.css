@@ -1,7 +1,6 @@
 .mini-navbar-container {
   position: absolute;
   inset: 100px 0% auto;
-  z-index: 500;
   overflow: hidden;
   padding: 0px 50px;
   display: flex;
@@ -62,6 +61,10 @@
     padding-left: 12.5px;
     justify-content: center;
   }
+
+  .mini-navbar-container {
+    transform: translateY(-75px);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -74,11 +77,11 @@
   }
 
   .mini-navbar-container {
-    transform: translateY(-120px);
+    transform: translateY(-125px);
   }
 }
 
-@media screen and (max-width: 595px) {
+@media screen and (max-width: 610px) {
   .mini-navbar-container {
     transform: translateY(-180px);
   }

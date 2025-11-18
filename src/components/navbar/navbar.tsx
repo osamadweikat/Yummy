@@ -8,37 +8,41 @@ import { NavLinks, navLinks, miniNavbarLinks } from "../../types/nav.types";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [navbarLinks, setNavbarLinks] = useState<NavLinks[]>([]);
+  const [openButton, setOpenButton] = useState<"navLinks" | "miniLinks" | null>(
+    null
+  );
+  const [navbarLinks, setNavbarLinks] = useState<NavLinks[]>(miniNavbarLinks);
+  const isOpen = openButton !== null;
 
   useEffect(() => {
     const handleClick = () => {
-      setIsOpen(false);
-      console.log("Mouse clicked, state set to false");
+      setOpenButton(null);
     };
-
     document.addEventListener("click", handleClick);
-
     return () => {
       document.removeEventListener("click", handleClick);
     };
   }, []);
 
-  const handleMiniOpen = (newLinks: NavLinks[]) => {
-    if (!isOpen) {
-      setNavbarLinks(newLinks);
-      setIsOpen(true);
+  const handleMiniOpen = (
+    newLinks: NavLinks[],
+    buttonId: "navLinks" | "miniLinks"
+  ) => {
+    if (openButton === buttonId) {
+      setOpenButton(null);
       return;
     }
-    if (navbarLinks === newLinks) {
-      setIsOpen(false);
-      return;
-    }
-    setIsOpen(false);
 
+    if (!openButton) {
+      setNavbarLinks(newLinks);
+      setOpenButton(buttonId);
+      return;
+    }
+
+    setOpenButton(null);
     setTimeout(() => {
       setNavbarLinks(newLinks);
-      setIsOpen(true);
+      setOpenButton(buttonId);
     }, 600);
   };
 
@@ -60,7 +64,8 @@ const Navbar = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setIsOpen(!isOpen);
+              setOpenButton(isOpen ? null : "navLinks");
+              setNavbarLinks(miniNavbarLinks);
             }}
             className="navbar-button"
           >
@@ -68,33 +73,69 @@ const Navbar = () => {
               <img
                 src={MenuIcon}
                 alt="menu-icon"
-                className={`icon menu ${isOpen ? "hidden" : "visible"}`}
+                className={`icon menu ${
+                  openButton === "navLinks" ? "hidden" : "visible"
+                }`}
               />
               <img
                 src={CloseIcon}
                 alt="close-icon"
-                className={`icon close ${isOpen ? "visible" : "hidden"}`}
+                className={`icon close ${
+                  openButton === "navLinks" ? "visible" : "hidden"
+                }`}
               />
             </div>
             <span>yummy menu</span>
           </button>
+
           <div
             onClick={(e) => {
               e.stopPropagation();
-              handleMiniOpen(navLinks);
+              handleMiniOpen(navLinks, "navLinks");
             }}
             className="navbar-mobile-button"
           >
-            <img src={MobileMenuIcon} alt="mobile-menu-button" />
+            <div className="icon-wrapper">
+              <img
+                src={MobileMenuIcon}
+                alt="menu-icon"
+                className={`icon menu ${
+                  openButton === "navLinks" ? "hidden" : "visible"
+                }`}
+              />
+              <img
+                src={CloseIcon}
+                alt="close-icon"
+                className={`icon close ${
+                  openButton === "navLinks" ? "visible" : "hidden"
+                }`}
+              />
+            </div>
           </div>
+
           <div
             onClick={(e) => {
               e.stopPropagation();
-              handleMiniOpen(miniNavbarLinks);
+              handleMiniOpen(miniNavbarLinks, "miniLinks");
             }}
             className="navbar-mobile-button"
           >
-            <img src={MenuIcon} alt="menu-button" />
+            <div className="icon-wrapper">
+              <img
+                src={MenuIcon}
+                alt="menu-icon"
+                className={`icon menu ${
+                  openButton === "miniLinks" ? "hidden" : "visible"
+                }`}
+              />
+              <img
+                src={CloseIcon}
+                alt="close-icon"
+                className={`icon close ${
+                  openButton === "miniLinks" ? "visible" : "hidden"
+                }`}
+              />
+            </div>
           </div>
         </div>
       </nav>
