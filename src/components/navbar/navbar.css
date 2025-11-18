@@ -160,3 +160,62 @@
 .navbar-mobile-button:hover {
   background-color: var(--gold-color);
 }
+
+@media screen and (max-width: 991px) {
+  .navbar-container {
+    padding: 12.5px;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .barnd-container {
+    min-width: auto;
+  }
+
+  .navbar-links {
+    display: none;
+    height: 75px;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    justify-content: space-around;
+  }
+
+  .navbar-links li {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    justify-content: center;
+  }
+
+  .navbar-button-wrapper {
+    min-width: auto;
+  }
+
+  .navbar-button {
+    display: none;
+  }
+
+  .navbar-mobile-button {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-links {
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex-direction: column;
+  }
+
+  .navbar-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .navbar-links {
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

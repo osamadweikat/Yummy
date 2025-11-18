@@ -45,3 +45,47 @@
 .mini-navbar-links li:hover {
   opacity: 0.5;
 }
+
+@media screen and (max-width: 991px) {
+  .mini-navbar-container {
+    top: 75px;
+    padding: 12.5px 0px;
+  }
+
+  .mini-navbar-links {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+  }
+
+  .mini-navbar-links li {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mini-navbar-links {
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .mini-navbar-container {
+    transform: translateY(-120px);
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .mini-navbar-container {
+    transform: translateY(-180px);
+  }
+}
+
+@media screen and (max-width: 339px) {
+  .mini-navbar-container {
+    transform: translateY(-230px);
+  }
+}
