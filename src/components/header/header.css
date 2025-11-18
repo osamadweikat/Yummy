@@ -68,6 +68,7 @@
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
+
 .header-contact-container button img,
 .header-social-container button img {
   width: 20x;
@@ -176,6 +177,7 @@ img[alt="mail"] {
     transform: translateX(0);
   }
 }
+
 .header-icon-container {
   position: relative;
   z-index: 200;
@@ -330,4 +332,116 @@ img[alt="mail"] {
   max-width: 3px;
   border-radius: 3px;
   background-color: var(--goldenrod-color);
+}
+
+@media screen and (max-width: 991px) {
+  .header-section {
+    height: auto;
+    padding-top: 0px;
+  }
+
+  .header-contact-container,
+  .header-social-container {
+    display: none;
+  }
+
+  .header-vertical-divider {
+    min-height: 100px;
+  }
+
+  .header-photo-container {
+    width: 50%;
+  }
+
+  .header-title1 {
+    inset: 0%;
+    width: 100%;
+    margin-top: -75px;
+    padding-top: 25px;
+    padding-right: 0%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header-title2 {
+    inset: 0%;
+    width: 100%;
+    margin-bottom: -75px;
+    padding-left: 0%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .opening-hours-text {
+    left: auto;
+    top: 50px;
+  }
+
+  .header-phone-text {
+    right: auto;
+    bottom: 50px;
+  }
+
+  .header-nav-menu-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .header-text-container {
+    grid-template: "Area" "Area-2" "Area-3" / 1fr;
+  }
+
+  .header-photo-container {
+    width: 65%;
+  }
+
+  .header-title1 {
+    margin-right: 0px;
+    justify-content: center;
+  }
+
+  .header-title2 {
+    margin-left: 0px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header-section {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+  }
+
+  .header-container {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+  }
+
+  .header-contact-container button,
+  .header-social-container button {
+    margin-top: 12.5px;
+    margin-right: 12.5px;
+    margin-left: 12.5px;
+  }
+
+  .header-photo-container {
+    width: 100%;
+  }
+
+  .header-title1 {
+    margin-top: -30px;
+    padding-top: 15px;
+    font-size: 100px;
+  }
+
+  .header-title2 {
+    margin-bottom: -30px;
+    font-size: 100px;
+  }
 }
