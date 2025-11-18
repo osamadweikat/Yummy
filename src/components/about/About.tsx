@@ -66,7 +66,7 @@ const About = () => {
           </div>
           <div className="about-newsletter-block">
             <div className="about-newsletter-form">
-              <input type="email" placeholder="Newsletter (Email)" />
+              <input type="email" placeholder="Newsletter Email)" />
               <button className="newsletter-form-button" />
             </div>
           </div>
