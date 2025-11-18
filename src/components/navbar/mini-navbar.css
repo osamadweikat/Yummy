@@ -12,6 +12,7 @@
   transform: translateY(-50px);
   transition: transform 0.6s ease;
 }
+
 .mini-navbar-container.open {
   transform: translateY(0);
 }

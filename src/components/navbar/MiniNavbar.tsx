@@ -1,21 +1,18 @@
 import "./mini-navbar.css";
+import { NavLinks } from "../../types/nav.types";
 
 interface NavbarProps {
   isOpen: boolean;
+  navbarLinks: NavLinks[];
 }
 
-const MiniNavbar = ({ isOpen }: NavbarProps) => {
+const MiniNavbar = ({ isOpen, navbarLinks }: NavbarProps) => {
   return (
     <nav className={`mini-navbar-container ${isOpen ? "open" : ""}`}>
       <ul className="mini-navbar-links">
-        <li>all</li>
-        <li>hous dishes</li>
-        <li>soups</li>
-        <li>pizzas</li>
-        <li>pastas</li>
-        <li>salads</li>
-        <li>desert</li>
-        <li>drinks</li>
+        {navbarLinks.map((link) => (
+          <li key={link.id}>{link.label}</li>
+        ))}
       </ul>
     </nav>
   );
