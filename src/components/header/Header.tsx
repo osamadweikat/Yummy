@@ -7,6 +7,7 @@ import TwitterLogo from "../../images/twitter-logo.svg";
 import InstagramLogo from "../../images/instagram-logo.svg";
 import HeaderBg2 from "../../images/header-bg-2.svg";
 import HeaderMainPhoto from "../../images/header-main-photo.jpeg";
+import { miniNavbarLinks } from "../../types/nav.types";
 
 const Header = () => {
   return (
@@ -52,6 +53,19 @@ const Header = () => {
         <h6 className="header-phone-text">
           make a reservation: <span>+1 917-695-4445</span>
         </h6>
+      </div>
+      <div className="header-nav-menu-wrapper">
+        <div className="color-bullet" />
+        <div className="header-menu-list-wrapper">
+          <div className="header-menu-list">
+            {miniNavbarLinks.slice(2).map((link) => (
+              <div className="header-menu-item">
+                <button key={link.id}>{link.label}</button>
+                <div className="color-bullet" />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );
