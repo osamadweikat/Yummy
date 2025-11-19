@@ -39,6 +39,12 @@
   border-radius: 100%;
   background-color: var(--goldenrod-color);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 25px 0px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.facts-text-wrapper.fade-in {
+  opacity: 1;
 }
 
 .facts-number {
@@ -62,6 +68,33 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* spin animation */
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  } /* دورتين */
+}
+
+@keyframes spin-counter {
+  from {
+    transform: rotate(720deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.facts-spin-wrapper.spin-clockwise {
+  animation: spin-clockwise 0.6s linear;
+}
+
+.facts-spin-wrapper.spin-counter {
+  animation: spin-counter 0.6s linear;
 }
 
 .facts-photo-wrapper {
