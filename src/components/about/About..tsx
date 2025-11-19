@@ -1,5 +1,4 @@
 import "./about.css";
-import SendIcon from "../../images/send-logo.svg";
 
 const About = () => {
   return (
@@ -9,12 +8,21 @@ const About = () => {
           <h6 className="form-title">make a reservation</h6>
           <div className="reservation-form-block">
             <div className="conntact-form">
-              <input type="date" className="reservation-date" />
-              <input type="time" className="reservation-time" />
+              <input
+                type="text"
+                className="reservation-date"
+                placeholder="Date (dd/mm)"
+              />
+              <input
+                type="text"
+                className="reservation-time"
+                placeholder="Time (hh/mm)"
+              />
               <input
                 type="number"
                 className="reservation-guests"
                 placeholder="Guests (Ex:8)"
+                min={1}
               />
               <input
                 type="text"
@@ -27,7 +35,7 @@ const About = () => {
                 placeholder="Email"
               />
               <input
-                type="phone"
+                type="number"
                 className="reservation-phone"
                 placeholder="Phone"
               />
@@ -37,28 +45,29 @@ const About = () => {
         </div>
         <div className="about-info-container">
           <div className="about-info-text">
-            <h2 className="about-us">
+            <h2 className="about-us-title">
               about <span>us</span>
             </h2>
             <div className="title-divider" />
             <p>
               <b>
-                Fusce laoreet nulla dui, et venenatis massa dictum maximus
-                dignissim eget. Donec nec ligula vel augue dapibus dignissim et
-                ac eros.
-              </b>{" "}
-              Proin bibenduquis lacus idm arcu at maximus. Maecenas ac dictum
-              lacus, et porta diam. Pellentesque maximus quis lacus id
-              varius.Maecenas ac dictum lacus, et porta diam.Maecenas ac dictum
-              lacus, et porta diam.{" "}
+                Welcome to <span>Yummy Restaurant</span> where flavor meets
+                passion! Our mission is to provide a memorable dining experience
+                with fresh, high-quality ingredients and dishes crafted with
+                love.
+              </b>
+              <br />
+              <br />
+              From classic favorites to unique culinary creations, we cater to
+              all tastes and occasions. Whether you're here for a quick bite, a
+              family dinner, or a special celebration, our friendly staff
+              ensures you feel right at home. Come and taste the difference!
             </p>
           </div>
           <div className="about-newsletter-block">
             <div className="about-newsletter-form">
-              <input type="email" placeholder="Newsletter (Email)" />
-              <button className="newsletter-form-button">
-                <img src={SendIcon} alt="send-icon" />
-              </button>
+              <input type="email" placeholder="Newsletter Email)" />
+              <button className="newsletter-form-button" />
             </div>
           </div>
         </div>
