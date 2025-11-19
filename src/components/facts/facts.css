@@ -77,3 +77,21 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 991px) {
+  .facts-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .facts-wrapper {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .facts-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+}
