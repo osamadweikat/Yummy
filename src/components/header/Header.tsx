@@ -8,8 +8,11 @@ import InstagramLogo from "../../images/instagram-logo.svg";
 import HeaderBg2 from "../../images/header-bg-2.svg";
 import { miniNavbarLinks } from "../../types/nav.types";
 import Navbar from "../navbar/Navbar";
+import { useInView } from "../../hooks/useInView";
 
 const Header = () => {
+  const { setRef, inViewIndexes } = useInView<HTMLElement>();
+
   return (
     <header className="header-section">
       <Navbar />
@@ -39,8 +42,24 @@ const Header = () => {
         <div className="header-text-container">
           <div className="header-vertical-divider" />
           <div className="header-photo-container">
-            <h1 className="header-title1">yummy</h1>
-            <h1 className="header-title2">tummy</h1>
+            <h1
+              ref={setRef}
+              className={`header-title1 ${
+                inViewIndexes.includes(0) ? "animate-left" : ""
+              }`}
+            >
+              yummy
+            </h1>
+
+            <h1
+              ref={setRef}
+              className={`header-title2 ${
+                inViewIndexes.includes(1) ? "animate-right" : ""
+              }`}
+            >
+              tummy
+            </h1>
+
             <div className="header-icon-container" />
             <div className="header-secondary-image">
               <img src={HeaderBg2} alt="" />

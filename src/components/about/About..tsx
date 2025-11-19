@@ -1,10 +1,18 @@
 import "./about.css";
+import { useInView } from "../../hooks/useInView";
 
 const About = () => {
+  const { setRef, inViewIndexes } = useInView<HTMLElement>();
+
   return (
     <section className="about-section">
       <div className="about-container">
-        <div className="reservation-form-container">
+        <div
+          ref={setRef}
+          className={`reservation-form-container ${
+            inViewIndexes.includes(0) ? "animate-left" : ""
+          }`}
+        >
           <h6 className="form-title">make a reservation</h6>
           <div className="reservation-form-block">
             <div className="conntact-form">
@@ -43,7 +51,12 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="about-info-container">
+        <div
+          ref={setRef}
+          className={`about-info-container ${
+            inViewIndexes.includes(1) ? "animate-right" : ""
+          }`}
+        >
           <div className="about-info-text">
             <h2 className="about-us-title">
               about <span>us</span>
