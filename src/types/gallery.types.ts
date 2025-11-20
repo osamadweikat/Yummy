@@ -22,6 +22,6 @@ export const galleryData: Gallery[] = [
   {
     id: 4,
     backgroundImage:
-      "https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d77775eb9339d3ee72a4e0e_gallery-2.jp",
+      "https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d77775eb9339d3ee72a4e0e_gallery-2.jpg",
   },
 ];
