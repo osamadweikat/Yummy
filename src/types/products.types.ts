@@ -1,10 +1,3 @@
-import ProductImage1 from "../images/product-image1.jpeg";
-import ProductImage2 from "../images/product-image2.jpeg";
-import ProductImage3 from "../images/product-image3.jpeg";
-import ProductImage4 from "../images/product-image4.jpeg";
-import ProductImage5 from "../images/product-image5.jpeg";
-import ProductImage6 from "../images/product-image6.jpeg";
-
 export enum ProductTag {
   Vegetarian = "vegetarian",
   Vegan = "vegan",
@@ -27,7 +20,8 @@ export const Products: Product[] = [
     price: 250,
     description:
       "gorgonzola cheese, basil pesto, mozzarella, roasted garlic, cherry tomatoes, olive oil, oregano",
-    image: ProductImage1,
+    image:
+      "https://cdn.prod.website-files.com/5d6a433a85adc9596a08ab18/5d80927be4875a16be09c783_pizza2.jpg",
     tags: [ProductTag.Vegan, ProductTag.Spicy],
   },
   {
@@ -36,7 +30,8 @@ export const Products: Product[] = [
     price: 250,
     description:
       "pineapple chunks, mozzarella, creamy cheese blend, sweet corn, tomato sauce, herbs mix, olives",
-    image: ProductImage2,
+    image:
+      "https://cdn.prod.website-files.com/5d6a433a85adc9596a08ab18/5d80928a10123f5624b53030_pizza3.jpg",
     tags: [ProductTag.Vegetarian, ProductTag.Vegan, ProductTag.Spicy],
   },
   {
@@ -45,7 +40,8 @@ export const Products: Product[] = [
     price: 250,
     description:
       "spicy beans, jalapeños, cheddar blend, grilled peppers, tomatoes, fresh cilantro, mexican seasoning",
-    image: ProductImage3,
+    image:
+      "https://cdn.prod.website-files.com/5d6a433a85adc9596a08ab18/5d80926dddf528d718ceb2f6_pizza1.jpg",
     tags: [ProductTag.Vegetarian, ProductTag.Vegan],
   },
   {
@@ -54,7 +50,8 @@ export const Products: Product[] = [
     price: 250,
     description:
       "choux pastry, vanilla cream, dark chocolate glaze, butter, sugar, cocoa drizzle, sweet topping",
-    image: ProductImage4,
+    image:
+      "https://cdn.prod.website-files.com/5d6a433a85adc9596a08ab18/5d809cd74f6ce521b3dd091c_dessert1.jpg",
     tags: [],
   },
   {
@@ -63,7 +60,8 @@ export const Products: Product[] = [
     price: 250,
     description:
       "quinoa mix, cherry tomatoes, cucumbers, lime dressing, parsley, chili flakes, olive oil, salt",
-    image: ProductImage5,
+    image:
+      "https://cdn.prod.website-files.com/5d6a433a85adc9596a08ab18/5d809f322580d26675068eda_salad3.jpg",
     tags: [ProductTag.Spicy],
   },
   {
@@ -72,7 +70,8 @@ export const Products: Product[] = [
     price: 250,
     description:
       "shredded chicken, tortilla strips, sweet corn, tomatoes, beans, mild spices, fresh cilantro",
-    image: ProductImage6,
+    image:
+      "https://cdn.prod.website-files.com/5d6a433a85adc9596a08ab18/5d809b1db8b5ead4e88dc73d_soup1.jpg",
     tags: [ProductTag.Vegan],
   },
 ];
