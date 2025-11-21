@@ -174,3 +174,41 @@
 .contact-form button:hover {
   background-color: var(--gold-color);
 }
+
+@media screen and (max-width: 991px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0%;
+  }
+
+  .contact-form-container {
+    right: 0px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-form-container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contact-form-container {
+    width: 100%;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+  }
+}
