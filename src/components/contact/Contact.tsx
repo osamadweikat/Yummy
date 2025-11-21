@@ -22,15 +22,15 @@ const Contact = () => {
         <div className="map">
           <img src={MapImage} alt="map" />
         </div>
-        <div className="contact-social-container">
-          <h6>give us a hout</h6>
-          <div className="contact-form-block">
-            <div className="contact-form">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <textarea placeholder="Message" />
-              <button>send message</button>
-            </div>
+      </div>
+      <div className="contact-form-container">
+        <h6>give us a hout</h6>
+        <div className="contact-form-block">
+          <div className="contact-form">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Message" />
+            <button>send message</button>
           </div>
         </div>
       </div>
