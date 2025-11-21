@@ -102,3 +102,43 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 1050px) {
+  .testimonials-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .testimonials-wrapper {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .testimonials-section {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .testimonials-container {
+    row-gap: 25px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .testimonials-section {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+  }
+
+  .testimonials-container {
+    flex-direction: column;
+  }
+
+  .testimonials-wrapper {
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+}
