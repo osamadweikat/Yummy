@@ -84,12 +84,16 @@
 
 .event-name {
   width: 100%;
-  font-size: 30px;
+  max-width: 100%;
+  text-align: center;
+  font-size: clamp(18px, 4vw, 30px);
   font-weight: 700;
   font-family: "Teko", sans-serif;
   text-transform: uppercase;
   color: white;
-  word-spacing: 20px;
+  word-spacing: 10px;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .event-name span {
@@ -121,4 +125,29 @@
 .event-container:hover .event-text-wrapper {
   animation: cinematicEffect 1s ease forwards;
   animation-delay: 1s;
+}
+
+@media screen and (max-width: 1144px) {
+  .events-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .events-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .event-card-back {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .events-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
 }
