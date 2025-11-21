@@ -4,6 +4,7 @@ import Gallery from "../../components/gallery/Gallery";
 import Header from "../../components/header/Header";
 import Menu from "../../components/menu/Menu";
 import Partner from "../../components/partner/Partner";
+import Testimonials from "../../components/testimonials/Testimonials";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Gallery />
       <Menu />
       <Partner />
+      <Testimonials />
     </div>
   );
 };
