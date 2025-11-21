@@ -3,11 +3,17 @@ import FacebookLogo from "../../images/facebook-logo.svg";
 import TwitterLogo from "../../images/twitter-logo.svg";
 import InstagramLogo from "../../images/instagram-logo.svg";
 import MapImage from "../../images/map-image.jpg";
+import { useInView } from "../../hooks/useInView";
 
 const Contact = () => {
+    const { setRef, inViewIndexes } = useInView<HTMLElement>();
+
   return (
     <section className="contact-section">
-      <div className="map-container">
+      <div ref={setRef}
+          className={`map-container ${
+            inViewIndexes.includes(0) ? "animate-left" : ""
+          }`}>
         <div className="contact-social-container">
           <button>
             <img src={FacebookLogo} alt="facebook" />
@@ -23,7 +29,10 @@ const Contact = () => {
           <img src={MapImage} alt="map" />
         </div>
       </div>
-      <div className="contact-form-container">
+      <div ref={setRef}
+          className={`contact-form-container ${
+            inViewIndexes.includes(1) ? "animate-right" : ""
+          }`}>
         <h6>give us a hout</h6>
         <div className="contact-form-block">
           <div className="contact-form">

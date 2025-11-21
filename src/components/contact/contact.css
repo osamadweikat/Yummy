@@ -15,6 +15,7 @@
   background-size: auto, auto;
   background-repeat: repeat, repeat;
   background-attachment: scroll, scroll;
+  overflow: hidden;
 }
 
 .map-container {
@@ -23,6 +24,14 @@
   min-height: 440px;
   flex-direction: column;
   align-items: flex-start;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 1.2s ease;
+}
+
+.map-container.animate-left {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .contact-social-container {
@@ -75,6 +84,14 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(35, 35, 35);
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 1.2s ease;
+}
+
+.contact-form-container.animate-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .contact-form-container h6 {
