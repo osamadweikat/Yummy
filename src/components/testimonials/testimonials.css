@@ -38,10 +38,15 @@
   background-size: 75% 75%;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 50px -25px;
-  transition-property: box-shadow;
-  transition-duration: 200ms;
-  transition-timing-function: ease;
+  transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.2s ease;
+  transform: scale(0.5);
+  opacity: 0;
   text-align: center;
+}
+
+.testimonials-wrapper.in-view {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .testimonials-wrapper:hover {
