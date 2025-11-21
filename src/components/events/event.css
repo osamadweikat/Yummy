@@ -1,0 +1,124 @@
+.events-section {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://cdn.prod.website-files.com/5d5ffc98b6d68de20504403c/5d74c5bd7a6dfa748822e36a_concrete_seamless.png");
+  background-size: auto, 125px;
+}
+
+.event-container {
+  position: relative;
+  z-index: 10;
+  perspective: 1000px;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.event-card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+.event-container:hover .event-card {
+  transform: rotateY(180deg);
+}
+
+.event-card-front {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--goldenrod-color);
+  background-position: 50% 50%;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+
+.event-text-wrapper {
+  position: absolute;
+  inset: 30%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: var(--goldenrod-color);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 25px 0px;
+}
+
+.event-text {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.back-text {
+  transform: rotateY(180deg);
+}
+
+.event-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(19, 19, 19);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.event-name {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  word-spacing: 20px;
+}
+
+.event-name span {
+  color: rgb(237, 180, 8);
+}
+
+.event-details-text {
+  max-width: 300px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+@keyframes cinematicEffect {
+  0% {
+    transform: scale(1) rotateX(0deg) rotateY(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95) rotateX(-5deg) rotateY(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.9) rotateX(-8deg) rotateY(8deg);
+    opacity: 0;
+  }
+}
+
+.event-container:hover .event-text-wrapper {
+  animation: cinematicEffect 1s ease forwards;
+  animation-delay: 1s;
+}
