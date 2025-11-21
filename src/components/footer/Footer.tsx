@@ -21,8 +21,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-navbar">
-        <div className="footer-nav" />
-        <h6 className="footer text">
+        <h6 className="footer-text">
           powered by <span>osama dweikat</span>
         </h6>
       </div>
