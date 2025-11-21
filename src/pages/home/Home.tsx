@@ -1,4 +1,5 @@
 import About from "../../components/about/About.";
+import Event from "../../components/events/Event";
 import Facts from "../../components/facts/Facts";
 import Gallery from "../../components/gallery/Gallery";
 import Header from "../../components/header/Header";
@@ -16,6 +17,7 @@ const Home = () => {
       <Menu />
       <Partner />
       <Testimonials />
+      <Event />
     </div>
   );
 };
