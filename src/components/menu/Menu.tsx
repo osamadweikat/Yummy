@@ -1,18 +1,31 @@
 import "./menu.css";
 import { Products } from "../../types/products.types";
+import { useInView } from "../../hooks/useInView";
 
 const Menu = () => {
+  const { setRef, inViewIndexes } = useInView<HTMLDivElement>();
+
   return (
     <section className="menu-section">
       <div className="menu-container">
-        <div className="menu-title-container">
+        <div
+          ref={setRef}
+          className={`menu-title-container fade-up ${
+            inViewIndexes.includes(0) ? "in-view" : ""
+          }`}
+        >
           <h2>
             <span>house </span>dishes
           </h2>
           <div className="title-divider" />
         </div>
         <div className="menu-list-collection">
-          <div className="products-list">
+          <div
+            ref={setRef}
+            className={`products-list fade-up ${
+              inViewIndexes.includes(1) ? "in-view" : ""
+            }`}
+          >
             {Products.map((product) => (
               <div key={product.id} className="menu-product-container">
                 <div className="menu-product-wrapper">
@@ -46,7 +59,12 @@ const Menu = () => {
             ))}
           </div>
         </div>
-        <div className="menu-button-container">
+        <div
+          ref={setRef}
+          className={`menu-button-container fade-up ${
+            inViewIndexes.includes(2) ? "in-view" : ""
+          }`}
+        >
           <button>book a table</button>
         </div>
       </div>
