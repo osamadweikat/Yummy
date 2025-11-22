@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Menu from "../../components/menu/Menu";
-import { ProdutCategory } from "../../types/products.types";
+import NotFound from "../../pages/not-found/NotFound";
+import { ProdutCategory, Products } from "../../types/products.types";
 import { ScrollContext } from "../../context/ScrollContext";
 import { HeaderConfig } from "../../types/header.types";
 
@@ -16,6 +17,14 @@ const MenuPage: FC = () => {
     paramCategory?.trim().toLowerCase() === "all"
       ? "all"
       : (paramCategory?.trim().toLowerCase() as ProdutCategory);
+
+  const validCategories: string[] = Array.from(
+    new Set(Products.flatMap((p) => p.category))
+  );
+
+  if (!validCategories.includes(category)) {
+    return <NotFound />;
+  }
 
   const scrollTo = (index: number) => {
     const elements =

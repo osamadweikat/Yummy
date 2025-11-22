@@ -5,6 +5,7 @@ export enum ProductTag {
 }
 
 export enum ProdutCategory {
+  All = "all",
   Home = "home",
   House = "house",
   Soups = "soups",
