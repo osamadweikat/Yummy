@@ -38,44 +38,12 @@ export const navLinks: NavLinks[] = [
 ];
 
 export const miniNavbarLinks: NavLinks[] = [
-  {
-    id: 9,
-    label: "all",
-    path: "/",
-  },
-  {
-    id: 10,
-    label: "hous dishes",
-    path: "/",
-  },
-  {
-    id: 11,
-    label: "soups",
-    path: "/",
-  },
-  {
-    id: 12,
-    label: "pizzas",
-    path: "/",
-  },
-  {
-    id: 13,
-    label: "pastas",
-    path: "/",
-  },
-  {
-    id: 14,
-    label: "salads",
-    path: "/",
-  },
-  {
-    id: 15,
-    label: "desert",
-    path: "/",
-  },
-  {
-    id: 16,
-    label: "drinks",
-    path: "/",
-  },
+  { id: 9, label: "all", path: "all" },
+  { id: 10, label: "house dishes", path: "house" },
+  { id: 11, label: "soups", path: "soups" },
+  { id: 12, label: "pizzas", path: "pizzas" },
+  { id: 13, label: "pastas", path: "pastas" },
+  { id: 14, label: "salads", path: "salads" },
+  { id: 15, label: "dessert", path: "dessert" },
+  { id: 16, label: "drinks", path: "drinks" },
 ];

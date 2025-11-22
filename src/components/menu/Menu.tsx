@@ -1,9 +1,32 @@
 import "./menu.css";
-import { Products } from "../../types/products.types";
+import { Products, ProdutCategory } from "../../types/products.types";
 import { useInView } from "../../hooks/useInView";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
-const Menu = () => {
+interface MenuProps {
+  category?: ProdutCategory | "all";
+}
+
+const Menu: React.FC<MenuProps> = ({ category }) => {
   const { setRef, inViewIndexes } = useInView<HTMLDivElement>();
+  const [filteredProducts, setFilteredProducts] = useState(Products);
+  const navigate = useNavigate();
+
+  const handleBookTable = () => {
+    navigate("/", { state: { scrollToIndex: 1 } });
+  };
+
+  useEffect(() => {
+    if (!category || category === "all") {
+      setFilteredProducts(Products);
+    } else {
+      setFilteredProducts(
+        Products.filter((p) => p.category.includes(category as ProdutCategory))
+      );
+    }
+  }, [category]);
 
   return (
     <section className="menu-section">
@@ -15,47 +38,14 @@ const Menu = () => {
           }`}
         >
           <h2>
-            <span>house </span>dishes
+            <span>{category === "home" ? "house" : category} </span>dishes
           </h2>
           <div className="title-divider" />
         </div>
         <div className="menu-list-collection">
-          <div
-            ref={setRef}
-            className={`products-list fade-up ${
-              inViewIndexes.includes(1) ? "in-view" : ""
-            }`}
-          >
-            {Products.map((product) => (
-              <div key={product.id} className="menu-product-container">
-                <div className="menu-product-wrapper">
-                  <div className="product-info-container">
-                    <div className="product-info-wrapper">
-                      <h3>{product.name}</h3>
-                      <div className="title-divider" />
-                      <p>{product.description}</p>
-                      <div className="product-tags-wrapper">
-                        {product.tags.map((tag) => (
-                          <div key={tag} className="product-tag-wrapper">
-                            <h6 className={`tag tag-${tag}`}>{tag}</h6>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="product-image"
-                    style={{ backgroundImage: `url(${product.image})` }}
-                  >
-                    <div className="price-tag">
-                      <span>{product.price} usd</span>
-                    </div>
-                  </div>
-                  <div className="product-name-container">
-                    <h3 className="product-name">{product.name}</h3>
-                  </div>
-                </div>
-              </div>
+          <div ref={setRef} className="products-list">
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
@@ -65,7 +55,7 @@ const Menu = () => {
             inViewIndexes.includes(2) ? "in-view" : ""
           }`}
         >
-          <button>book a table</button>
+          <button onClick={handleBookTable}>Book a Table</button>
         </div>
       </div>
     </section>
