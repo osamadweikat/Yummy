@@ -2,6 +2,7 @@ import "./footer.css";
 import PinIcon from "../../images/pin-color.svg";
 import PhoneIcon from "../../images/phone-color.svg";
 import MailIcon from "../../images/mail-color.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,7 +23,10 @@ const Footer = () => {
       </div>
       <div className="footer-navbar">
         <h6 className="footer-text">
-          powered by <span>osama dweikat</span>
+          powered by{" "}
+          <span>
+            <Link to="https://github.com/osamadweikat">osama dweikat</Link>
+          </span>
         </h6>
       </div>
     </footer>

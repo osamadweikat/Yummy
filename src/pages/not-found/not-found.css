@@ -123,3 +123,47 @@
 .not-found-div-block button:hover {
   background-color: var(--gold-color);
 }
+
+@media screen and (max-width: 1020px) {
+  .not-found-div-block h1 {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .not-found-vertical-divider {
+    min-height: 100px;
+  }
+
+  .not-found-div-block h1 {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 771px) {
+  .not-found-container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .not-found-text-container {
+    grid-template: "Area" "Area-2" "Area-3" / 1fr;
+  }
+
+  .not-found-div-block h1 {
+    font-size: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .not-found-container {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+  }
+
+  .not-found-div-block h1 {
+    font-size: 40px;
+  }
+}
