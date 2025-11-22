@@ -1,46 +1,132 @@
-# Getting Started with Create React App
+# 🍽️ Yummy Restaurant Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Yummy**, a fully animated, elegant, and highly responsive front-end project built with **React + TypeScript**.  
+Designed with a **luxurious golden–black theme**, smooth motion effects, dynamic routing, and a refined user experience.
 
-## Available Scripts
+🔗 **Live Demo:** https://osamadweikat-yummy.netlify.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🎨 Modern & Premium UI
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Sleek gold–black color theme
+- Smooth transitions & scroll-based animations
+- Clean layout with well-structured sections
 
-### `npm test`
+### 📱 Fully Responsive
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 100% responsive on all devices
+- Adaptive layout for mobile, tablet, and desktop
+- Mobile-friendly navigation with a collapsible menu
 
-### `npm run build`
+### 📅 Reservation System
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Simple & user-friendly reservation form
+- Visitors can easily book a table
+- Smooth UX with clean validation styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📍 Interactive Map Section
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Location preview for the restaurant
+- Helps users find the place quickly
+- Integrated clean map-style UI
 
-### `npm run eject`
+### ☎️ Contact & Communication
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Dedicated contact section
+- Allows visitors to reach out easily
+- Includes phone, email, and operational details
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🍽️ Menu & Categories
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Organized dishes by category
+- Attractive hover effects and animations
+- Clear prices & item descriptions
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 🧭 Smooth Scroll Experience
 
-## Learn More
+- Custom scroll styling
+- Soft background/foreground color inversion on scroll
+- Enhanced browsing experience without sudden jumps
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ⚙️ Clean & Scalable Code
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Component-based structure
+- Reusable UI pieces
+- Organized folder structure ready for expansion
+
+---
+
+## ⚙️ Tech Stack & Tools
+
+- ⚛️ **React + TypeScript**
+- 🔀 **React Router v6**
+- 🎞️ **Framer Motion** (scroll-triggered animations)
+- 🧠 **Custom Hooks** (useInView, scroll context)
+- 🎨 **Custom Global Scrollbar**
+- 🖼️ **Lightbox Gallery with Thumbnails & Navigation**
+- 📱 **Fully Responsive Across All Devices**
+- 🧩 **Modular Components Structure**
+
+---
+
+## 📁 Project Structure
+
+```
+/src
+│── components
+│   ├── Header
+│   ├── Navbar
+│   ├── MiniNavbar
+│   ├── About
+│   ├── Facts
+│   ├── Gallery
+│   ├── Menu
+│   ├── Events
+│   ├── Testimonials
+│   ├── Partner
+│   ├── Contact
+│   └── Footer
+│
+│── pages
+│   ├── Home.tsx
+│   ├── MenuPage.tsx
+│   └── NotFound.tsx
+│
+│── context
+│   └── ScrollContext.tsx
+│
+│── hooks
+│   ├── useInView.ts
+│   └── useDynamicScrollbar.ts
+│
+│── types
+│   ├── products.types.ts
+│   └── header.types.ts
+│
+│── App.tsx
+└── index.tsx
+```
+
+---
+
+## 🧩 Project Highlights
+
+- Beautiful UI/UX with luxury colors ✨
+- High-performance animations ⚡
+- User-focused sections (Contact, Reservation, Menu, Location)
+- Elegant scroll effects & navbar behavior
+- Perfect for real restaurant branding
+
+
+---
+
+# 🖤 Thank You for Visiting 🖤
+
+This project was crafted with passion, creativity, and endless cups of coffee ☕.  
+From backend logic to frontend elegance — every detail was made with care.  
+
+🚀 **Built to inspire. Designed to perform.**  
+Made with ❤️ by **Osama Dweikat** ✨
