@@ -44,14 +44,149 @@
   transform: scale(1);
 }
 
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: rgba(247, 247, 247, 0.5);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.main-image {
+  width: 45%;
+  max-height: 70vh;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: rgba(247, 247, 247, 0.5);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: white;
+}
+
+.nav-btn.left {
+  left: -150px;
+}
+
+.nav-btn.right {
+  right: -150px;
+}
+
+.nav-btn.hidden {
+  display: none;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnails .thumb {
+  flex-shrink: 0;
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.thumbnails .thumb:hover {
+  transform: scale(1.1);
+}
+
+.thumbnails .thumb.active {
+  border-color: whitesmoke;
+}
+
 @media screen and (max-width: 991px) {
+  .nav-btn.left {
+    left: -40px;
+  }
+  .nav-btn.right {
+    right: -40px;
+  }
   .gallery-section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
   }
 }
 
+@media screen and (max-width: 779px) {
+  .main-image {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 479px) {
+  .nav-btn.left {
+    left: -20px;
+  }
+  .nav-btn.right {
+    right: -20px;
+  }
+  .thumbnails .thumb {
+    width: 50px;
+    height: 35px;
+  }
   .gallery-section {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
