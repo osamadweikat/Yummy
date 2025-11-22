@@ -1,4 +1,5 @@
 import "./not-found.css";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -7,11 +8,15 @@ const NotFound = () => {
         <div className="not-found-text-container">
           <div className="not-found-vertical-divider" />
           <div className="not-found-div-block">
-            <span>error 404</span>
+            <h6>
+              error <span>404</span>
+            </h6>
             <h1>
               page <span>not</span> found
             </h1>
-            <button>go back home</button>
+            <Link to="/">
+              <button>go back home</button>
+            </Link>
           </div>
           <div className="not-found-vertical-divider" />
         </div>
