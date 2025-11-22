@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useDynamicScrollbar } from "./hooks/useDynamicScrollbar";
 import Home from "./pages/home/Home";
 import MenuPage from "./pages/menu/MenuPage";
 import NotFound from "./pages/not-found/NotFound";
 
 function App() {
+  useDynamicScrollbar();
   return (
     <Router>
       <Routes>
