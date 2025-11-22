@@ -22,7 +22,7 @@ const MenuPage: FC = () => {
     new Set(Products.flatMap((p) => p.category))
   );
 
-  if (!validCategories.includes(category)) {
+  if (!validCategories.includes(category) && category !== "all") {
     return <NotFound />;
   }
 
