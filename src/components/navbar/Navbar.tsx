@@ -6,8 +6,10 @@ import MiniNavbar from "./MiniNavbar";
 import MobileMenuIcon from "../../images/mobile-menu-icon.svg";
 import { NavLinks, navLinks, miniNavbarLinks } from "../../types/nav.types";
 import { useEffect, useState } from "react";
+import { useScroll } from "../../context/ScrollContext";
 
 const Navbar = () => {
+  const { scrollTo } = useScroll();
   const [openButton, setOpenButton] = useState<"navLinks" | "miniLinks" | null>(
     null
   );
@@ -56,7 +58,14 @@ const Navbar = () => {
         <div className="nav-menu">
           <ul className="navbar-links">
             {navLinks.map((link) => (
-              <li key={link.id}>{link.label}</li>
+              <li
+                key={link.id}
+                onClick={() => {
+                  scrollTo(link.id - 1);
+                }}
+              >
+                {link.label}
+              </li>
             ))}
           </ul>
         </div>
@@ -87,7 +96,6 @@ const Navbar = () => {
             </div>
             <span>yummy menu</span>
           </button>
-
           <div
             onClick={(e) => {
               e.stopPropagation();
@@ -112,7 +120,6 @@ const Navbar = () => {
               />
             </div>
           </div>
-
           <div
             onClick={(e) => {
               e.stopPropagation();

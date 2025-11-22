@@ -1,39 +1,39 @@
 export interface NavLinks {
   id: number;
   label: string;
-  path: string;
+  path: number | string;
 }
 
 export const navLinks: NavLinks[] = [
   {
     id: 1,
     label: "home",
-    path: "/",
+    path: 0,
   },
   {
     id: 2,
     label: "book a table",
-    path: "/",
+    path: 1,
   },
   {
     id: 3,
     label: "gallery",
-    path: "/",
+    path: 2,
   },
   {
     id: 4,
     label: "house dishes",
-    path: "/",
+    path: 3,
   },
   {
     id: 5,
     label: "events",
-    path: "/",
+    path: 4,
   },
   {
     id: 6,
     label: "contact",
-    path: "/",
+    path: 5,
   },
 ];
 
