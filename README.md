@@ -125,8 +125,7 @@ Designed with a **luxurious golden–black theme**, smooth motion effects, dynam
 
 # 🖤 Thank You for Visiting 🖤
 
-This project was crafted with passion, creativity, and endless cups of coffee ☕.  
-From backend logic to frontend elegance — every detail was made with care.  
+This project was crafted with passion, creativity, and endless cups of coffee ☕.    
 
 🚀 **Built to inspire. Designed to perform.**  
 Made with ❤️ by **Osama Dweikat** ✨
